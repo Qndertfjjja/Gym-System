@@ -105,16 +105,16 @@ if(!isset($_SESSION['user_id'])){
                             // Switch statement based on the membership plan
                             switch ($membership_plan) {
                                 case 30:
-                                    echo 'One Month';
+                                    echo '1 Month';
                                     break;
                                 case 90:
-                                    echo 'Three Months';
+                                    echo '3 Months';
                                     break;
                                 case 180:
-                                    echo 'Six Months';
+                                    echo '6 Months';
                                     break;
                                 case 365:
-                                    echo 'One Year';
+                                    echo '1 Year';
                                     break;
                                 default:
                                     echo 'Unknown';

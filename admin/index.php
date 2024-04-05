@@ -250,7 +250,8 @@ $result5=mysqli_query($con,$qry);
         <li class="bg_ls span"> <a href="index.php" style="font-size: 16px;"> <i class="fas fa-user-check"></i> <span class="label label-important"><?php include'actions/dashboard-activecount.php'?></span> Active Members </a> </li>
         <li class="bg_lo span3"> <a href="members.php" style="font-size: 16px;"> <i class="fas fa-users"></i></i><span class="label label-important"><?php include'dashboard-usercount.php'?></span> Registered Members</a> </li>
         <li class="bg_lg span3"> <a href="payment.php" style="font-size: 16px;"> <i class="fa fa-rupee-sign"></i> Total Earnings: ₹<?php include'income-count.php' ?></a> </li>
-        <li class="bg_lb span2"> <a href="manage-announcement.php" style="font-size: 16px;"> <i class="fas fa-bullhorn"></i><span class="label label-important"><?php include'actions/count-birthday.php'?></span>Birthday </a> </li>
+        <li class="bg_lb span2"> <a href="manage-birthday.php" style="font-size: 16px;"> <i class="fas fa-bullhorn"></i><span class="label label-important"><?php include'actions/count-birthday.php'?></span>Birthday </a> </li>
+        <li class="bg_ly span2"> <a href="enquiry.php" style="font-size: 16px;"> <i class="fas fa-file"></i></i><span class="label label-important"><?php include'actions/count-enquiry.php'?></span>Enquiry</a> </li>
 
         
         <!-- <li class="bg_ls span2"> <a href="buttons.html"> <i class="fas fa-tint"></i> Buttons</a> </li>

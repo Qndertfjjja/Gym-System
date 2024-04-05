@@ -95,9 +95,34 @@ header('location:../index.php');
                 <td><div class='text-center'>".$row['contact']."</div></td>
                 <td><div class='text-center'>".$row['dor']."</div></td>
                 <td><div class='text-center'>".$row['address']."</div></td>
-                <td><div class='text-center'>$".$row['amount']."</div></td>
+                <td><div class='text-center'>₹".$row['amount']."</div></td>
                 <td><div class='text-center'>".$row['services']."</div></td>
-                <td><div class='text-center'>".$row['plan']." Month/s</div></td>
+                <td>
+                                        <div class='text-center'>";
+                                            $plan = $row['plan'];
+                                            $duration = '';
+                                            switch ($plan) {
+                                                case 30:
+                                                    $duration = '1 Month';
+                                                    break;
+                                                case 90:
+                                                    $duration = '3 Months';
+                                                    break;
+                                                case 180:
+                                                    $duration = '6 Months';
+                                                    break;
+                                                case 365:
+                                                    $duration = '1 Year';
+                                                    break;
+                                                default:
+                                                    $duration = 'Unknown';
+                                                    break;
+                                            }
+                                            echo $duration;
+                                        echo "</div>
+                                    </td>
+                               
+                        
                 <td><div class='text-center'><a href='actions/delete-member.php?id=".$row['user_id']."' style='color:#F66;'><i class='fas fa-trash'></i> Remove</a></div></td>
                 
               </tbody>";

@@ -104,16 +104,16 @@ if(!isset($_SESSION['user_id'])){
                                             $duration = '';
                                             switch ($plan) {
                                                 case 30:
-                                                    $duration = 'One Month';
+                                                    $duration = '1 Month';
                                                     break;
                                                 case 90:
-                                                    $duration = 'Three Months';
+                                                    $duration = '3 Months';
                                                     break;
                                                 case 180:
-                                                    $duration = 'Six Months';
+                                                    $duration = '6 Months';
                                                     break;
                                                 case 365:
-                                                    $duration = 'One Year';
+                                                    $duration = '1 Year';
                                                     break;
                                                 default:
                                                     $duration = 'Unknown';

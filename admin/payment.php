@@ -95,7 +95,7 @@ header('location:../index.php');
                   <th>Choosen Service</th>
                   <th>Plan</th>
                   <th>Action</th>
-                  <th>Remind</th>
+                 
                 </tr>
               </thead>";
               
@@ -109,9 +109,34 @@ header('location:../index.php');
                 
                 <td><div class='text-center'><?php echo '₹'.$row['amount']?></div></td>
                 <td><div class='text-center'><?php echo $row['services']?></div></td>
-                <td><div class='text-center'><?php echo $row['plan']." Month/s"?></div></td>
+                <td>
+                                        <div class='text-center'>
+                                        <?php  $plan = $row['plan'];
+                                            $duration = '';
+                                            switch ($plan) {
+                                                case 30:
+                                                    $duration = '1 Month';
+                                                    break;
+                                                case 90:
+                                                    $duration = '3 Months';
+                                                    break;
+                                                case 180:
+                                                    $duration = '6 Months';
+                                                    break;
+                                                case 365:
+                                                    $duration = '1 Year';
+                                                    break;
+                                                default:
+                                                    $duration = 'Unknown';
+                                                    break;
+                                            }
+                                            echo $duration;?>
+                                        </div>
+                                    </td>
+                            
+                          
                 <td><div class='text-center'><a href='user-payment.php?id=<?php echo $row['user_id']?>'><button class='btn btn-success btn'><i class='fas fa-rupee-sign'></i> Make Payment</button></a></div></td>
-                <td><div class='text-center'><a href='sendReminder.php?id=<?php echo $row['user_id']?>'><button class='btn btn-danger btn' <?php echo($row['reminder'] == 1 ? "disabled" : "")?>>Alert</button></a></div></td>
+                <!-- <td><div class='text-center'><a href='sendReminder.php?id=<?php echo $row['user_id']?>'><button class='btn btn-danger btn' <?php echo($row['reminder'] == 1 ? "disabled" : "")?>>Alert</button></a></div></td> -->
               </tbody>
           <?php $cnt++; }
 
